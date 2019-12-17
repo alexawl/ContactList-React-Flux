@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-
-import { ContactCard } from "../component/ContactCard.js";
+import PropTypes from "prop-types";
+import { ContactCard } from "../component/contactCard.js";
 import { Modal } from "../component/Modal";
 
 export const Contacts = () => {
@@ -13,7 +13,7 @@ export const Contacts = () => {
 		<div className="container">
 			<div>
 				<p className="text-right my-3">
-					<Link className="btn btn-success" to="/add">
+					<Link className="btn btn-success" to={"/add-contact/"}>
 						Add new contact
 					</Link>
 				</p>

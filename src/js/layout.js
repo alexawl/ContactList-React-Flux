@@ -5,8 +5,8 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 import injectContext from "./store/appContext";
 
-import { Contacts } from "./views/Contacts.js";
-import { AddContact } from "./views/AddContact.js";
+import { Contacts } from "./views/contacts";
+import { AddContact } from "./views/addContact";
 
 export const Layout = () => {
 	return (
@@ -17,7 +17,7 @@ export const Layout = () => {
 						<Route exact path="/index.html" component={Contacts} />
 						<Route exact path="/" component={Contacts} />
 						<Route exact path="/contacts" component={Contacts} />
-						<Route exact path="/add" component={AddContact} />
+						<Route exact path="/add-contact/" component={AddContact} />
 						<Route exact path="/edit" component={AddContact} />
 						<Route render={() => <h1 className="notfound">Not found!</h1>} />
 					</Switch>
