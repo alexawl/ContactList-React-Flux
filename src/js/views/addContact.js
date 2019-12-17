@@ -1,28 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Context } from "../store/appContext";
-import PropTypes from "prop-types";
 
-export const AddContact = props => {
-	const [name, setName] = useState(null);
-	const [email, setEmail] = useState(null);
-	const [phone, setPhone] = useState(null);
-	const [address, setAddress] = useState(null);
-	const { store, actions } = useContext(Context);
-
-	// THIS IS ONE WAY TO USE ONCHANGE EVENT
-	// YOU DEFINE HERE THE METHOD AND YOU CALL IN THE NAME INPUT
-	function handleNameChange(e) {
-		setName(e.target.value);
-	}
-	// THIS IS ONE WAY TO USE ONCHANGE EVENT
-	// IN THIS CASE WE ARE USING AN ARROW FUNCTION AND WE ARE CALLING IT IN THE EMAIL INPUT
-	const handleEmailChange = e => {
-		setEmail(e.target.value);
-	};
-	function method(store) {
-		console.log("store:", store);
-	}
+export const AddContact = () => {
 	return (
 		<div className="container">
 			<div>
@@ -69,7 +48,7 @@ export const AddContact = props => {
 						/>
 					</div>
 					<button
-						onClick={() => actions.addANewContact(name, email, address, phone, "store", props.history)}
+						onClick={() => actions.addANewContact()}
 						type="button"
 						className="btn btn-primary form-control">
 						save
@@ -81,8 +60,4 @@ export const AddContact = props => {
 			</div>
 		</div>
 	);
-};
-AddContact.propTypes = {
-	history: PropTypes.object,
-	match: PropTypes.object
 };

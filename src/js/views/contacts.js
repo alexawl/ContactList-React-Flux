@@ -13,7 +13,7 @@ export const Contacts = () => {
 		<div className="container">
 			<div>
 				<p className="text-right my-3">
-					<Link className="btn btn-success" to={"/add-contact/"}>
+					<Link className="btn btn-success" to={"/add-contacts/"}>
 						Add new contact
 					</Link>
 				</p>
